@@ -2,33 +2,33 @@
   <div>
     <layout/>
     <div class="divLeft">
-      <input type="text" class="searchInput" v-model="form.codeNm" placeholder="코드명" style="display:table-cell;width:90%"/>
-      <input class="searchBtn" type="button" @click="test1" value="조회"/> <!--v-on:click="test" -->
+      <el-input type="text" class="searchInput" v-model="form.codeNm" placeholder="코드명" style="width:90%" clearable/><!--  display:table-cell; -->
+      <el-button class="searchBtn" type="primary" @click="test1">조회</el-button> <!--v-on:click="test" -->
     </div>
     <div class="mt10" style="height:300px;overflow-y: scroll;overflow-x: auto;">
       <div style="text-align:left">
         <span>대표코드</span>
       </div>
-      <table style="width:100%" class="mt10">
+      <el-table style="width:100%" class="mt10">
         <colgroup>
-          <col width="10%">
-          <col width="20%">
-          <col width="20%">
-          <col width="10%">
-          <col width="10%">
-          <col width="10%">
-          <col width="10%">
-          <col width="10%">
+          <el width="10%"/>
+          <el width="20%"/>
+          <el width="20%"/>
+          <el width="10%"/>
+          <el width="10%"/>
+          <el width="10%"/>
+          <el width="10%"/>
+          <el width="10%"/>
         </colgroup>
         <thead>
-          <td scope="col">코드</td>
-          <td scope="col">코드명</td>
-          <td scope="col">코드영문명</td>
-          <td scope="col">코드순서</td>
-          <td scope="col">사용여부</td>
-          <td scope="col">연결코드1</td>
-          <td scope="col">연결코드2</td>
-          <td scope="col">연결코드3</td>
+          <td scope="el">코드</td>
+          <td scope="el">코드명</td>
+          <td scope="el">코드영문명</td>
+          <td scope="el">코드순서</td>
+          <td scope="el">사용여부</td>
+          <td scope="el">연결코드1</td>
+          <td scope="el">연결코드2</td>
+          <td scope="el">연결코드3</td>
         </thead>
         <tbody>
           <tr v-for="item in codeInfoList" :key="item.commCdId" @click="httptest(item)">
@@ -42,7 +42,7 @@
             <td>{{item.conn3Cd}}</td>
           </tr>
         </tbody>
-      </table>
+      </el-table>
     </div>
     <div class="mt10" style="overflow-y: scroll;overflow-x: auto;">
       <div style="text-align:left">
@@ -50,26 +50,26 @@
       </div>
       <table style="width:100%" class="mt10">
         <colgroup>
-          <col width="10%">
-          <col width="5%">
-          <col width="20%">
-          <col width="15%">
-          <col width="10%">
-          <col width="10%">
-          <col width="10%">
-          <col width="10%">
-          <col width="10%">
+          <el-col width="10%"/>
+          <el-col width="5%"/>
+          <el-col width="20%"/>
+          <el-col width="15%"/>
+          <el-col width="10%"/>
+          <el-col width="10%"/>
+          <el-col width="10%"/>
+          <el-col width="10%"/>
+          <el-col width="10%"/>
         </colgroup>
         <thead>
-          <td scope="col">대표코드</td>
-          <td scope="col">코드</td>
-          <td scope="col">코드명</td>
-          <td scope="col">코드영문명</td>
-          <td scope="col">코드순서</td>
-          <td scope="col">사용여부</td>
-          <td scope="col">연결코드1</td>
-          <td scope="col">연결코드2</td>
-          <td scope="col">연결코드3</td>
+          <td scope="el-col">대표코드</td>
+          <td scope="el-col">코드</td>
+          <td scope="el-col">코드명</td>
+          <td scope="el-col">코드영문명</td>
+          <td scope="el-col">코드순서</td>
+          <td scope="el-col">사용여부</td>
+          <td scope="el-col">연결코드1</td>
+          <td scope="el-col">연결코드2</td>
+          <td scope="el-col">연결코드3</td>
         </thead>
         <tbody>
           <tr v-for="item in codeList" :key="item.cdId">
